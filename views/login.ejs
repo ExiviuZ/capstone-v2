@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/alert.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('./partials/error') %>
+
+    <main>
+      <h1>LOGIN</h1>
+      <form action="/user/login" method="post" class="form">
+        <div class="form-control">
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            id="username"
+          />
+          <span class="error-message"></span>
+        </div>
+        <div class="form-control">
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+          />
+          <span class="error-message"></span>
+        </div>
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <span class="no-account"
+        >Don't have an account? <a href="/user/register">Create here</a></span
+      >
+    </main>
+  </body>
+</html>
